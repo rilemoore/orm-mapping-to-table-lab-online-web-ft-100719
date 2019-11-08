@@ -27,7 +27,7 @@ class Student
   end
 
   def save
-    sql = "INSERT INTO students VALUES (?, ?)"
+    sql = "INSERT INTO students(name, grade) VALUES (?, ?)"
     DB[:conn].execute(sql, @name, @grade)
     binding.pry
      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
