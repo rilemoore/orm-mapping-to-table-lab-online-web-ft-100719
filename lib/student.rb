@@ -10,7 +10,7 @@ class Student
   end
   
   def self.create_table
-    sql = "CREATE "
+    sql = "CREATE TABLE"
     DB[:conn].execute(sql) 
   end
 
