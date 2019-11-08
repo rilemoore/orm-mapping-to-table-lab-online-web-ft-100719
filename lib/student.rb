@@ -10,7 +10,8 @@ class Student
   end
   
   def self.create_table
-    DB[:conn] 
+    sql = "CREATE "
+    DB[:conn].execute(sql) 
   end
 
   # Remember, you can access your database connection anywhere in this class
